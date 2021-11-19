@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 public class Main {
 
-    public void cart(){
+    public static void cart(){
         CompetitorBasedPricing competitorBasedPricing = new CompetitorBasedPricing();
         Cart cart = new Cart();
         cart.addItem(new Item(new Product("Ipad Pro", new Price(10000, "INR")), 1));
@@ -36,10 +36,14 @@ public class Main {
         cart.addItem(new Item(new Product("Ipad Pro",
                 new Price(competitorBasedPricing.calculateDiscountPrice(10, "Ipad Pro"), "INR")
         ), 3));
+
+        cart.cartCheckout();
     }
     public static void main(String []args){
-        Customer customer = new Customer();
-        customer.updateAddress(new Address("Delhi"));
-        customer.updateAddress(new Address("Hyderabad"));
+//        Customer customer = new Customer();
+//        customer.updateAddress(new Address("Delhi"));
+//        customer.updateAddress(new Address("Hyderabad"));
+
+        cart();
     }
 }

@@ -55,3 +55,6 @@ Account has Address
 Address has one attribute called City
 Address is Value Object
 ----  customer.updateAddress(address)
+
+Problem #11 - Calculate Total cost for the Order.  Put shipping cost as per weight
+Total cost = cost of all products in order + (weightIngrams of each product *.01)

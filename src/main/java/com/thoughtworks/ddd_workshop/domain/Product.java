@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Product {
     String name;
+    double weight;
     Price price;
 
     public Product(String name, Price price) {

@@ -6,7 +6,19 @@ public class Cart {
 
     ArrayList<Item> items = new ArrayList<>();
     ArrayList<String> removedItems = new ArrayList<String>();
+    boolean checkout = false;
 
+    public void cartCheckout() {
+        Order order = new Order();
+        try{
+            order.createOrder(items);
+            checkout = true;
+        }
+        catch (Exception e){
+            checkout = false;
+        }
+        System.out.println("Cart Checkout");
+    }
     public void addItem(Item item)
     {
         items.add(item);
